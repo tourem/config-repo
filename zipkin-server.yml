@@ -1,10 +1,10 @@
 server:
-  port: 8080
+  port: 9411
 
 
 spring:
   application:
-    name: products-service
+    name: zipkin-server
 
 eureka:
   client:
