@@ -1,12 +1,17 @@
 server:
   port: 8082
 
-
 spring:
   application:
     name: pricing-service
-  zipkin.base-url: http://localhost:9411
-
+  sleuth:
+    sampler:
+      percentage: 1.0
+    web:
+      skipPattern: (^cleanup.*)
+  zipkin:
+    base-url: http://localhost:9411
+    
 eureka:
   client:
     serviceUrl:
